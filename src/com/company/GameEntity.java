@@ -1,14 +1,17 @@
 package com.company;
 
 public class GameEntity {
-    private int health, damage;
 
-    public int getHeals() {
+    private int health;
+    private int damage;
+    private String name;
+
+    public int getHealth() {
         return health;
     }
 
-    public void setHeals(int heals) {
-        this.health = heals;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int getDamage() {
@@ -19,4 +22,11 @@ public class GameEntity {
         this.damage = damage;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -3,23 +3,33 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Weapon weapon = new Weapon();
-        Boss boss = new Boss();
-        Skelety skelety = new Skelety();
-        Skelety skelety1 = new Skelety();
-        weapon.setWeaponName("Нож");
-        weapon.setWeaponType("Холодное оружие");
-        boss.setHeals(1000);
-        boss.setDamage(200);
-        boss.setWeapon(weapon);
-//        System.out.println("Инфо о боссе\n"+
-//                "--------------------\n"+
-//                "Health:"+boss.getHeals()+
-//                "\nDamage:"+boss.getDamage()+
-//                "\nWeapon name:"+boss.getWeapon().getWeaponName()+
-//                "\nWeapon type:"+boss.getWeapon().getWeaponType());
-        System.out.println(boss.printInfo());
 
+        Boss boss = new Boss();
+        boss.setHealth(700);
+        boss.setDamage(50);
+        boss.setName("Black Gendalf");
+        Weapon bossWeapon = new Weapon();
+        bossWeapon.setNameOfWeapon("Staff");
+        bossWeapon.setTypeOfWeapon("Destroying everything good!!!");
+        boss.setWeaponOfBoss(bossWeapon);
+        System.out.println(boss.printInfo());
+        System.out.println("________________");
+        Skeletons skeleton1 = new Skeletons(5);
+        skeleton1.setHealth(70);
+        skeleton1.setDamage(10);
+        skeleton1.setName("Black Frodo.");
+        Weapon skeletonsWeapon = new Weapon();
+        skeletonsWeapon.setNameOfWeapon("Supporting for Black Gendalf!");
+        skeletonsWeapon.setTypeOfWeapon("Bow");
+        skeleton1.setWeaponOfBoss(skeletonsWeapon);
+        Skeletons skeleton2 = new Skeletons(1);
+        skeleton2.setHealth(60);
+        skeleton2.setDamage(8);
+        skeleton2.setName("Black Golum");
+        skeleton2.setWeaponOfBoss(skeletonsWeapon);
+        System.out.println(skeleton1.printInfo());
+        System.out.println("________________");
+        System.out.println(skeleton2.printInfo());
 
     }
 }

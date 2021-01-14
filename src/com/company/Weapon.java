@@ -1,21 +1,22 @@
 package com.company;
 
 public class Weapon {
-    private String weaponName, weaponType;
+    private String typeOfWeapon;
+    private String nameOfWeapon;
 
-    public String getWeaponName() {
-        return weaponName;
+    public String getTypeOfWeapon() {
+        return typeOfWeapon;
     }
 
-    public void setWeaponName(String weaponName) {
-        this.weaponName = weaponName;
+    public void setTypeOfWeapon(String typeOfWeapon) {
+        this.typeOfWeapon = typeOfWeapon;
     }
 
-    public String getWeaponType() {
-        return weaponType;
+    public String getNameOfWeapon() {
+        return nameOfWeapon;
     }
 
-    public void setWeaponType(String weaponType) {
-        this.weaponType = weaponType;
+    public void setNameOfWeapon(String nameOfWeapon) {
+        this.nameOfWeapon = nameOfWeapon;
     }
 }
